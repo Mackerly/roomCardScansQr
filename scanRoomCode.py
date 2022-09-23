@@ -5,7 +5,7 @@ import os
 Token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcGVuaWQiOiJveFZxV3hIMWxTd1poSllLM3JhRkE3NjVPSmw4IiwiZXhwIjoxNjY0MTc4NzY0LjB9.R7xb66_1w2NgZtHH2yW0D6915TLCooyllox8YL67vGw'
 roomcode='22158be7-e22c-462e-a0b2-fa4c78e4af83'
 
-Token = os.environ["TOKEN"]
+
 Token = os.environ.get("TOKEN")
 print(Token)
 
