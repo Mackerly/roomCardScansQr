@@ -44,6 +44,4 @@ jobs:
         pip --version
         pip list
     - name: 扫场所码
-      env:
-        Token: ${{ secrets.Token }}
       run: python scanRoomCode.py
