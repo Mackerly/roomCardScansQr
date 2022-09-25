@@ -35,7 +35,7 @@ def getroomcodes():
 if __name__ == "__main__":
     start =time.time()
     rmcs = getroomcodes()
-    times = 5 # 重复 times 次
+    times = 1 # 重复 times 次
     for xx in range(times): 
         print('正在开始第 {} 轮扫码'.format(str(xx+1)))
         for x in range(len(rmcs)):
