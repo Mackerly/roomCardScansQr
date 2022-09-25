@@ -2,7 +2,6 @@ import requests
 import time
 import os
 
-#Token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvcGVuaWQiOiJveFZxV3hIMWxTd1poSllLM3JhRkE3NjVPSmw4IiwiZXhwIjoxNjY0MTc4NzY0LjB9.R7xb66_1w2NgZtHH2yW0D6915TLCooyllox8YL67vGw'
 roomcode='22158be7-e22c-462e-a0b2-fa4c78e4af83'
 
 Token = os.environ["TOKEN"]
@@ -36,7 +35,7 @@ def getroomcodes():
 if __name__ == "__main__":
     start =time.time()
     rmcs = getroomcodes()
-    times = 1 # 重复 times 次
+    times = 5 # 重复 times 次
     for xx in range(times): 
         print('正在开始第 {} 轮扫码'.format(str(xx+1)))
         for x in range(len(rmcs)):
