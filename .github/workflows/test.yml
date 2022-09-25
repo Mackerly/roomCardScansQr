@@ -43,8 +43,7 @@ jobs:
         python --version
         pip --version
         pip list
-    - name: 设置环境变量
+    - name: 扫场所码
       env:
         TOKEN: ${{ secrets.TOKEN }}
-    - name: 扫场所码
       run: python abc.py
