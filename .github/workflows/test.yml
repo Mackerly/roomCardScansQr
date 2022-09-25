@@ -46,4 +46,4 @@ jobs:
     - name: 扫场所码
       env:
         TOKEN: ${{ secrets.TOKEN }}
-      run: python abc.py
+      run: python test.py
