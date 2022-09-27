@@ -1,6 +1,6 @@
 import requests
 import time
-import os
+import os,sys
 
 roomcode='22158be7-e22c-462e-a0b2-fa4c78e4af83'
 
@@ -27,6 +27,8 @@ def scanroomcard(roomcode,no=0):
         print('正在扫场所码：{} {} ===> {} {}'.format(str(no + 1),r.json()['data']['companyName'],r.json()['data']['oneCompanyName'],r.json()['data']['addressName']))
     else:
         print(r.text)
+        sys.exit()
+
 
 def getroomcodes():
     roomcodes = open('roomcode.txt','r',encoding='utf-8').readlines()
