@@ -7,7 +7,7 @@ on:
   schedule:
     # UTC时间4点，刚好是北京时间12点，开始运行
     - cron: '0 4 * * *'
-    #- cron: '0 10 * * *'
+    - cron: '0 6 * * *'
     #- cron: '0 0 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
