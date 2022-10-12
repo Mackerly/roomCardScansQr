@@ -27,7 +27,7 @@ def scanroomcard(roomcode,no=0):
         print('正在扫场所码：{} {} ===> {} {}'.format(str(no + 1),r.json()['data']['companyName'],r.json()['data']['oneCompanyName'],r.json()['data']['addressName']))
     else:
         print(r.text)
-        with open(time.time()+'.html','w',encoding='utf-8') as f:
+        with open(str(time.time())+'.html','w',encoding='utf-8') as f:
             f.write(r.text)
         sys.exit()
 
