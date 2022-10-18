@@ -36,16 +36,19 @@ jobs:
         cd urllib3
         git checkout 1.26.x
         pip install .
+        cd ..
 
     - name: 安装依赖。
       run: pip install requests
 
-    - name: 显示 Python和 pip 的版本号,安装的包。
-      run: |
-        python --version
-        pip --version
-        pip list
     - name: 扫场所码
       env:
         TOKEN: ${{ secrets.TOKEN }}
       run: python scanRoomCode.py
+
+    - name: 上传文件
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
