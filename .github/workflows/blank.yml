@@ -31,12 +31,14 @@ jobs:
     - name: 安装 git,和 urllib3,解决 MaxRetryError 错误。
       run: |
         sudo -E apt-get update
-        sudo -E apt-get -y install git
+        sudo -E apt-get -y install git tree
         git clone https://github.com/urllib3/urllib3.git
         cd urllib3
         git checkout 1.26.x
         pip install .
         cd ..
+        tree
+
 
     - name: 安装依赖。
       run: pip install requests
