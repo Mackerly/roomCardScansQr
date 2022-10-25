@@ -22,7 +22,7 @@ headers = {
 
 def scanroomcard(roomcode,no=0):
     url = 'https://jkksh.hnhfpc.gov.cn/csm/jkxbservice.ashx?action=newaddroomcardv1&roomcode={roomcode}'.format(roomcode=roomcode)
-    r = requests.get(url,headers=headers)
+    r = requests.get(url,headers=headers,timeout=20)
     if (r.status_code == 200) and r.json()["errno"] == 0 and '发送成功' in r.json()["message"]:
         print('正在扫场所码：{} {} ===> {} {}'.format(str(no + 1),r.json()['data']['companyName'],r.json()['data']['oneCompanyName'],r.json()['data']['addressName']))
     else:
